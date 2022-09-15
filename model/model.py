@@ -5,8 +5,6 @@ import pandas as pd
 import glob
 import os
 
-__all__ = ['get_best_checkpoint_path']
-
 def get_best_checkpoint_path(checkpoint_directory, sort_by='val_loss'):
     checkpoint_file_names = glob.glob(os.path.join(checkpoint_directory, '*.ckpt'))
     #print(checkpoint_file_names) #['models/son_height_regression_model/son_height_regression_model-epoch=29-val_loss=0.00.ckpt', 'models/son_height_regression_model/son_height_regression_model-epoch=29-val_loss=0.00-v1.ckpt']
