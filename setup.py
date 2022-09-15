@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import find_packages, setup
 setup(
     name='mydates',
     version='0.0.1',
