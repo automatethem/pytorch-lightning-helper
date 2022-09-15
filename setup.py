@@ -10,5 +10,5 @@ setup(
     license='Sang Ki Kwon',
     packages=['pytorch_lightning_utils'],
     zip_safe=False,
-    install_requires=setup_tools._load_requirements(_PATH_ROOT)
+    install_requires=[]
 )
