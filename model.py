@@ -7,7 +7,6 @@ import os
 
 '''
 best_checkpoint_path = get_best_checkpoint_path('models/son_height_regression_model', monitor='val_loss', mode='min')
-best_checkpoint_path = get_best_checkpoint_path('models/bank_loan_approval_classification_model', monitor='val_accuracy', mode='max')
 best_checkpoint_path = get_best_checkpoint_path('models/iris_species_classification_model', monitor='val_accuracy', mode='max')
 '''
 def get_best_checkpoint_path(checkpoint_directory, monitor='val_loss', mode='min', default_best_checkpoint_path='models/son_height_regression_model/son_height_regression_model.ckpt'):
