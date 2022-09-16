@@ -5,6 +5,8 @@ import pandas as pd
 import glob
 import os
 
+#best_checkpoint_path = get_best_checkpoint_path('models/iris_species_classification_model')
+#best_checkpoint_path = get_best_checkpoint_path('models/iris_species_classification_model', monitor='val_accuracy', mode='max')
 def get_best_checkpoint_path(checkpoint_directory, monitor='val_loss', mode='min', default_best_checkpoint_path='models/son_height_regression_model/son_height_regression_model.ckpt'):
     checkpoint_file_names = glob.glob(os.path.join(checkpoint_directory, '*.ckpt'))
     #print(checkpoint_file_names) #['models/son_height_regression_model/son_height_regression_model-epoch=29-val_loss=0.00.ckpt', 'models/son_height_regression_model/son_height_regression_model-epoch=29-val_loss=0.00-v1.ckpt']
