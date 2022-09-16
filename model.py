@@ -5,11 +5,11 @@ import pandas as pd
 import glob
 import os
 
-def get_best_checkpoint_path(checkpoint_directory, sort_by='val_loss'):
+def get_best_checkpoint_path(checkpoint_directory, monitor='val_loss'):
     checkpoint_file_names = glob.glob(os.path.join(checkpoint_directory, '*.ckpt'))
     #print(checkpoint_file_names) #['models/son_height_regression_model/son_height_regression_model-epoch=29-val_loss=0.00.ckpt', 'models/son_height_regression_model/son_height_regression_model-epoch=29-val_loss=0.00-v1.ckpt']
     best_checkpoint_path = None
-    def sort_func(checkpoint_file_name, sort_by=sort_by):
+    def sort_func(checkpoint_file_name, monitor):
         for token in checkpoint_file_name.split('-'):
             if '=' in token:
                 li = token.split('=')
@@ -17,7 +17,7 @@ def get_best_checkpoint_path(checkpoint_directory, sort_by='val_loss'):
                 value = li[1]
                 if '.ckpt' in value:
                     value = value.split('.ckpt')[0]
-                if name == sort_by:
+                if name == monitor:
                     return float(value)
     checkpoint_file_names.sort(key=sort_func)
     best_checkpoint_path = checkpoint_file_names[0]
