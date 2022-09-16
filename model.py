@@ -6,7 +6,7 @@ import glob
 import os
 
 '''
-best_checkpoint_path = get_best_checkpoint_path('models/son_height_regression_model', monitor='val_loss', mode='mmin')
+best_checkpoint_path = get_best_checkpoint_path('models/son_height_regression_model', monitor='val_loss', mode='min')
 best_checkpoint_path = get_best_checkpoint_path('models/bank_loan_approval_classification_model', monitor='val_accuracy', mode='max')
 best_checkpoint_path = get_best_checkpoint_path('models/iris_species_classification_model', monitor='val_accuracy', mode='max')
 '''
