@@ -12,10 +12,9 @@ setuptools.setup(
 	long_description=open('README.md').read(),
 	author='Sang Ki Kwon',
 	url='https://github.com/automatethem/pytorch-lightning-helper',
-	packages=setuptools.find_packages(),
 	install_requires=requirements(),
 	author_email='automatethem@gmail.com',
 	license='MIT',
-	packages=find_packages(),
+	packages=setuptools.find_packages(),
 	zip_safe=False
 )
