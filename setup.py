@@ -5,7 +5,7 @@ This is pytorch lightning helper
 """
 
 setup(name='pytorch-lightning-helper',
-	  version='0.0.3',
+	  version='0.0.4',
 	  description='Pytorch lightning helper',
 	  long_description=LONG_DESC,
 	  author='Sang Ki Kwon',
