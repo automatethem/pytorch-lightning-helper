@@ -1,7 +1,7 @@
 from setuptools import *
 
 LONG_DESC = """
-This is pytorch lightning utilities
+This is pytorch lightning helper
 """
 
 setup(name='pytorch-lightning-helper',
