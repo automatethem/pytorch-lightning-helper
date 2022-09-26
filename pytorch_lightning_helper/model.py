@@ -17,8 +17,8 @@ def get_best_checkpoint_path(checkpoint_directory, monitor='val_loss', mode='min
         for token in checkpoint_file_name.split('-'):
             if '=' in token:
                 li = token.split('=')
-                name = strip(li[0])
-                value = strip(li[1])
+                name = li[0].strip()
+                value = li[1].strip()
                 if '.ckpt' in value:
                     value = value.split('.ckpt')[0]
                 if name == monitor:
